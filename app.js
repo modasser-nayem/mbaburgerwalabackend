@@ -13,13 +13,14 @@ const app = express();
 module.exports = app;
 
 // Using Middleware
-app.use(
-   cors({
-      credentials: true,
-      origin: process.env.FRONTEND_URL,
-      methods: ["GET", "PUT", "POST", "DELETE"],
-   })
-);
+app.use(cors());
+// app.use(
+//    cors({
+//       credentials: true,
+//       origin: process.env.FRONTEND_URL,
+//       methods: ["GET", "PUT", "POST", "DELETE"],
+//    })
+// );
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
