@@ -1,3 +1,4 @@
+require("dotenv").config();
 const User = require("../models/User.model");
 const { asyncErrorMid } = require("../middlewares/errorMiddlewares");
 const Order = require("../models/Order.model");
